@@ -1,68 +1,79 @@
-
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AtelierVR/node/development/public/logo.png" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AtelierVR/node/development/public/logo.png" />
-    <img src="https://raw.githubusercontent.com/AtelierVR/node/development/public/logo.png" width="360" alt="NoxVR" />
-  </picture>
+  <img src="logo.png" width="360" alt="NoxVR" />
 
-  <p><strong>A federated, open-source Social VR platform.</strong></p>
+  <br />
+  <br />
 
   <p>
-    <a href="https://github.com/AtelierVR/node"><img src="https://img.shields.io/badge/NestJS-Backend-e0234e?logo=nestjs&logoColor=white" alt="Backend" /></a>
-    <a href="https://github.com/AtelierVR/relay"><img src="https://img.shields.io/badge/Rust-Relay-f74c00?logo=rust&logoColor=white" alt="Relay" /></a>
-    <a href="https://github.com/AtelierVR/runtime"><img src="https://img.shields.io/badge/Unity-Runtime-000000?logo=unity&logoColor=white" alt="Unity" /></a>
-    <a href="https://github.com/AtelierVR/docs"><img src="https://img.shields.io/badge/Docs-Fumadocs-f97316" alt="Docs" /></a>
-    <img src="https://img.shields.io/badge/License-AGPL--3.0-22c55e" alt="License" />
+    <strong>A federated, open-source Social VR platform</strong><br />
+    <sub>Own your identity. Share your worlds. Connect across servers.</sub>
+  </p>
+
+  <br />
+
+  <p>
+    <a href="https://github.com/AtelierVR/node">
+      <img src="https://img.shields.io/badge/Node-NestJS%2FTypeScript-e0234e?style=for-the-badge&logo=nestjs&logoColor=white" alt="Node" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/AtelierVR/relay">
+      <img src="https://img.shields.io/badge/Relay-Rust%2FQUIC-f74c00?style=for-the-badge&logo=rust&logoColor=white" alt="Relay" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/AtelierVR/runtime">
+      <img src="https://img.shields.io/badge/Runtime-Unity%2FC%23-000000?style=for-the-badge&logo=unity&logoColor=white" alt="Runtime" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/AtelierVR/docs">
+      <img src="https://img.shields.io/badge/Docs-MDX%2FNext.js-f97316?style=for-the-badge" alt="Docs" />
+    </a>
+  </p>
+
+  <p>
+    <img src="https://img.shields.io/badge/License-AGPL--3.0-22c55e?style=flat-square" alt="License" />
+    <img src="https://img.shields.io/badge/Status-In%20Development-facc15?style=flat-square" alt="Status" />
+    <img src="https://img.shields.io/badge/Federation-ActivityPub--inspired-6366f1?style=flat-square" alt="Federation" />
   </p>
 </div>
 
+<br />
+
 ---
 
-NoxVR is a **federated social VR platform** — think ActivityPub, but for virtual reality. Servers are independent and interconnected. Users own their identity. Content is shared across the network.
+## What is NoxVR?
 
-## Core Projects
+NoxVR is a **federated social VR platform** — think ActivityPub, but for virtual reality. Each server is independent and can communicate with others. Users own their identity and content is shared across the network without a central authority.
+
+<br />
+
+## Philosophy
+
+**Free & open, by design — not by promise.**
+
+NoxVR is built on three core principles:
+
+- **Open-source under AGPL-3.0** — every part of the platform is fully open-source. The AGPL license ensures that any server running NoxVR must publish its source code, including modifications. This guarantees that the platform stays free, transparent, and auditable — no hidden code, no black-box servers.
+
+- **Federated by architecture** — there is no central authority. Anyone can run their own NoxVR server and join the network. Users keep their identity across servers. No single company controls the platform.
+
+- **Modding-oriented** — the platform is designed to be extended. The Unity runtime exposes a modding API so players and creators can add new content, mechanics, and interactions.
+
+<br />
+
+## 🔷 Core Projects
 
 | Repository | Description | Stack |
-|---|---|---|
-| [node](https://github.com/AtelierVR/node) | Central API server — auth, users, worlds, avatars, federation | TypeScript / NestJS |
-| [relay](https://github.com/AtelierVR/relay) | Real-time QUIC relay for multiplayer game sessions | Rust |
-| [runtime](https://github.com/AtelierVR/runtime) | Unity client runtime — rendering, networking, avatar system | C# / Unity |
-| [docs](https://github.com/AtelierVR/docs) | Official documentation — API reference, guides, technical specs | MDX / Next.js |
-| [nox.desktop](https://github.com/AtelierVR/nox.desktop) | Desktop overlay controller | C# |
-| [bot](https://github.com/AtelierVR/bot) | Load testing bot for relay servers | Rust |
+|:---|:---|:---:|
+| [**node**](https://github.com/AtelierVR/node) | Central API server — auth, users, worlds, avatars, federation | TypeScript / NestJS |
+| [**relay**](https://github.com/AtelierVR/relay) | Real-time QUIC relay for multiplayer game sessions | Rust |
+| [**runtime**](https://github.com/AtelierVR/runtime) | Unity client runtime — rendering, networking, interaction | C# / Unity |
+| [**docs**](https://github.com/AtelierVR/docs) | Official documentation — API reference, guides, technical specs | MDX / Next.js |
+| [**bot**](https://github.com/AtelierVR/bot) | Load testing bot for relay servers | Rust |
 
-## Unity Packages
-
-| Package | Description |
-|---|---|
-| [nox.cck](https://github.com/AtelierVR/nox.cck) | Content Creation Kit — build avatars & worlds for NoxVR |
-| [nox.xr](https://github.com/AtelierVR/nox.xr) | XR input and tracking integration |
-| [nox.controllers](https://github.com/AtelierVR/nox.controllers) | Controller input API |
-| [nox.microphone](https://github.com/AtelierVR/nox.microphone) | Microphone / voice capture |
-| [nox.ffmpeg](https://github.com/AtelierVR/nox.ffmpeg) | FFmpeg bindings for media playback |
-| [nox.offline](https://github.com/AtelierVR/nox.offline) | Offline / local play support |
-
-## Architecture
-
-```
-  Unity Client  ──QUIC──▶  Relay  ──WebSocket──▶  Node (API)
-                                                      │
-  Browser Client ──HTTP──────────────────────────────▶│
-                                                      │
-                                            PostgreSQL + Storage
-```
-
-- Each **Node** server is independent and federates with others via `.well-known/nox`
-- **Relay** servers register to a Node and handle real-time player sessions
-- **Unity clients** authenticate via Node and connect to Relay via QUIC
-
-## Documentation
-
-📖 [docs.ateliervr.fr](https://github.com/AtelierVR/docs) — API reference, avatar guides, relay protocol
+<br />
 
 ---
 
 <div align="center">
-  <p>Made with ♥ by <a href="https://github.com/AtelierVR">AtelierVR</a> &nbsp;·&nbsp; <a href="https://www.gnu.org/licenses/agpl-3.0">AGPL-3.0</a></p>
+  <sub>Made with ♥ by <a href="https://github.com/AtelierVR">AtelierVR</a> &nbsp;·&nbsp; <a href="https://www.gnu.org/licenses/agpl-3.0">AGPL-3.0</a></sub>
 </div>
