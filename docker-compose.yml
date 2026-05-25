@@ -1,0 +1,52 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    env_file: stack.env
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  node:
+    image: ghcr.io/ateliervr/node:latest
+    restart: unless-stopped
+    env_file: stack.env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    volumes:
+      - assets:/app/assets
+      - configs:/app/configs
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8080:8080"
+
+  front:
+    image: ghcr.io/ateliervr/front:latest
+    restart: unless-stopped
+    env_file: stack.env
+    ports:
+      - "127.0.0.1:3000:3000"
+
+  docs:
+    image: ghcr.io/ateliervr/docs:latest
+    restart: unless-stopped
+    env_file: stack.env
+    ports:
+      - "127.0.0.1:3001:3000"
+
+  relay:
+    image: ghcr.io/ateliervr/relay:latest
+    restart: unless-stopped
+    ports:
+      - "23032:23032/udp"
+
+volumes:
+  database:
+  assets:
+  configs:
