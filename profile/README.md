@@ -1,5 +1,5 @@
 <div align="center">
-  <img src=".github/header.png" width="640" alt="NoxVR" />
+  <img src="header.png" width="640" alt="NoxVR" />
 
   <br />
   <br />
