@@ -12,6 +12,10 @@
   <br />
 
   <p>
+    <a href="https://github.com/AtelierVR/front">
+      <img src="https://img.shields.io/badge/Front-Next.js%2FReact-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Front" />
+    </a>
+    &nbsp;
     <a href="https://github.com/AtelierVR/node">
       <img src="https://img.shields.io/badge/Node-NestJS%2FTypeScript-e0234e?style=for-the-badge&logo=nestjs&logoColor=white" alt="Node" />
     </a>
@@ -64,6 +68,7 @@ NoxVR is built on three core principles:
 
 | Repository | Description | Stack |
 |:---|:---|:---:|
+| [**front**](https://github.com/AtelierVR/front) | Web frontend — user interface, dashboard, settings | TypeScript / Next.js |
 | [**node**](https://github.com/AtelierVR/node) | Central API server — auth, users, worlds, avatars, federation | TypeScript / NestJS |
 | [**relay**](https://github.com/AtelierVR/relay) | Real-time QUIC relay for multiplayer game sessions | Rust |
 | [**runtime**](https://github.com/AtelierVR/runtime) | Unity client runtime — rendering, networking, interaction | C# / Unity |
